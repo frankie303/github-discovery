@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class Search extends Component {
+class Search extends Component {
   state = {
     text: ''
   };
@@ -15,12 +15,12 @@ export class Search extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    if (this.state.text === '') {
-      this.props.setAlert('Please enter something', 'light');
-    } else {
-      this.props.searchUsers(this.state.text);
-      this.setState({ text: '' });
-    }
+
+    this.state.text === ''
+    ? 
+    this.props.setAlert('Please enter something', 'light')
+    :
+    this.props.searchUsers(this.state.text) && this.setState({ text: '' })
   };
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });

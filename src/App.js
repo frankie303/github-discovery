@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
@@ -6,6 +6,7 @@ import Search from './components/users/Search';
 import Alert from './components/layout/Alert';
 import axios from 'axios';
 import './App.css';
+import About from './components/pages/About';
 
 class App extends Component {
   state = {
@@ -17,7 +18,7 @@ class App extends Component {
   //Search Github users
   searchUsers = async text => {
     this.setState({ loading: true });
-    
+
     const res = await axios.get(
       `https://api.github.com/search/users?q=${text}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
     );
@@ -49,7 +50,7 @@ class App extends Component {
                 exact
                 path='/'
                 render={props => (
-                  <Fragment>
+                  <>
                     <Search
                       searchUsers={this.searchUsers}
                       clearUsers={this.clearUsers}
@@ -57,9 +58,10 @@ class App extends Component {
                       setAlert={this.setAlert}
                     />
                     <Users loading={loading} users={users} />
-                  </Fragment>
+                  </>
                 )}
               />
+              <Route exact path='/about' component={About} />
             </Switch>
           </div>
         </div>
