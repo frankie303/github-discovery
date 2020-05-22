@@ -1,1 +1,1 @@
-https://githubstalker.netlify.app/
+https://githubdiscovery.netlify.app/
