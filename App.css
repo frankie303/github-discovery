@@ -2,10 +2,10 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #dc3545;
+  --primary-color: black;
   --dark-color: #333333;
   --light-color: #f4f4f4;
-  --danger-color: #dc3545;
+  --danger-color: #4e35dc;
   --success-color: #28a745;
 }
 
@@ -250,7 +250,6 @@ img {
 .badge-primary,
 .alert-primary {
   background: var(--primary-color);
-  color: #fff;
 }
 
 .btn-light,
@@ -274,7 +273,7 @@ img {
 .badge-danger,
 .alert-danger {
   background: var(--danger-color);
-  color: #fff;
+  color: rgb(196, 24, 24);
 }
 
 .btn-success,
