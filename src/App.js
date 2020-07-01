@@ -10,6 +10,7 @@ import './App.css';
 
 import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
+import Footer from './components/layout/Footer';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
                 <Route component={NotFound} />
               </Switch>
             </div>
+            <Footer />
           </div>
         </Router>
       </AlertState>
