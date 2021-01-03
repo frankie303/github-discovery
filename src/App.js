@@ -6,7 +6,7 @@ import Alert from './components/layout/Alert';
 import Home from './components/pages/Home';
 import NotFound from './components/pages/NotFound';
 
-import './App.css';
+import './App.scss';
 
 import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
