@@ -6,7 +6,7 @@ const Footer = () => {
       <p className='text-center'>
         Made with <i className='far fa-heart' /> in Berlin{' '}
         <a
-          href='https://github.com/frankie303'
+          href='https://mertciflikli.com'
           target='_blank'
           rel='noopener noreferrer'
         >

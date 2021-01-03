@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* Global Styles */
-$primary-color: #57f50d;
+$primary-color: #a586fa;
 $dark-color: #333333;
 $light-color: #2f50e2;
 $danger-color: #dc3545;
@@ -17,8 +17,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: rgb(20, 19, 19);
-  color: rgb(228, 212, 212);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 a {
@@ -36,6 +36,7 @@ ul {
 
 img {
   width: 100%;
+  margin: 0.5rem;
 }
 
 /* Utilities */
@@ -110,7 +111,7 @@ img {
 /* Cards */
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: #ccc 1px solid;
   margin: 0.7rem 0;
 }
 
@@ -190,9 +191,10 @@ img {
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  margin-right: 0.5rem;
+  border-radius: 5px;
 }
 
 .btn-link {
@@ -203,7 +205,7 @@ img {
 
 .btn-block {
   display: block;
-  width: 100%;
+  width: 20%;
 }
 
 .btn-sm {
@@ -294,6 +296,11 @@ img {
 }
 
 /* Forms */
+
+form {
+  display: flex;
+  justify-content: center;
+}
 input {
   margin: 1.2rem 0;
 }
@@ -311,7 +318,7 @@ input[type='date'],
 select,
 textarea {
   display: block;
-  width: 100%;
+  width: 50%;
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
@@ -337,29 +344,17 @@ table th {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 2rem;
+  padding: 0rem 1rem;
   z-index: 1;
   width: 100%;
   opacity: 0.9;
   margin-bottom: 1rem;
-}
-
-.navbar ul {
-  display: flex;
-}
-
-.navbar a {
-  color: rgb(14, 13, 13);
-  padding: 0.45rem;
-  margin: 0 0.25rem;
-}
-
-.navbar a:hover {
-  color: var($light-color);
-}
-
-.navbar .welcome span {
-  margin-right: 0.6rem;
+  h1 {
+    color: black;
+  }
+  img {
+    width: 70px;
+  }
 }
 
 /* Mobile Styles */
@@ -390,6 +385,10 @@ table th {
   .navbar ul {
     text-align: center;
     justify-content: center;
+  }
+
+  form {
+    margin-top: -1rem;
   }
 }
 
